@@ -1,6 +1,6 @@
 html, body
   color main_color
-  background-color back_color
+  background-color back_color !important
   font-family font
   line-height line_height
   font-size font_size
@@ -8,6 +8,9 @@ html, body
 a
   color link_color
   text-decoration link_decoration
+
+strong
+  color strong_color
 
 h1, h2, h3, h4, h5, h6
 	font-weight 100
@@ -42,6 +45,26 @@ h6
   font-size 1em
   color #777
 
+.md-fences,
+code,
+tt {
+    border: snipped_border;
+    background-color: code_background
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code
+  background-color code_background
+  color code_color
+  padding: 0 2px 0 2px
+
+.md-fences {
+	background-color: fences_background
+  border: fences_border;
+}
 
 #write {
     max-width: 860px;
@@ -178,23 +201,6 @@ table tr td:last-child {
     border-top: 1px solid #eef2f2;
 }
 
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
-}
-
-code {
-/*    background-color: #f3f4f4; */
-	background-color: #dce8ef;
-	color: #316085;
-    padding: 0 2px 0 2px;
-}
 
 .md-fences {
     margin-bottom: 15px;
@@ -221,9 +227,7 @@ code {
     }
 }
 
-.md-fences {
-	background-color: #f8f8f8;
-}
+
 #write pre.md-meta-block {
 	padding: 1rem;
     font-size: 85%;

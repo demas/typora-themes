@@ -1,22 +1,62 @@
 side-bar-bg-color = #fafafa
-control-text-color = #777
-foreground-color = #ff0000
-background-color = #fdf6e3
 
+font = "Clear Sans",sans-serif
+code_font = "JetBrains Mono", "Roboto Mono", Menlo, monospace
+font_size = 16px
+line_height = 1.6
+main_color = #656565
+back_color = #f2f3f5
+link_color = #008abc
 
-html {
-	font-family: "Clear Sans", sans-serif;
-	font-size: 16px;
-}
+link_decoration = none
+h1_color = #484849
+h2_color = #585859
+h_color = #5e676d
 
-html,
-body {
-    font-family: "Clear Sans",sans-serif;
-    line-height: 1.6;
-    background-color: #f2f3f5;
-    color: #656565;
+html, body
+  color main_color
+  background-color back_color
+  font-family font
+  line-height line_height
+  font-size font_size
 
-}
+a
+  color link_color
+  text-decoration link_decoration
+
+h1, h2, h3, h4, h5, h6
+	font-weight 100
+	color h_color
+	margin 0.5rem 0
+
+h1
+  line-height 1.4
+  color h1_color
+  padding-bottom .3em
+  font-size 2.25em
+  line-height 1.2
+  border-bottom 1px solid #eee
+
+h2
+  color h2_color
+  padding-bottom .3em
+  font-size 1.75em
+  line-height 1.225
+
+h3
+  font-size 1.5em
+  line-height 1.43
+
+h4
+  font-size 1.25em
+
+h5
+  font-size 1em
+
+h6
+  font-size 1em
+  color #777
+
 
 #write {
     max-width: 860px;
@@ -29,32 +69,6 @@ body {
     margin-top: 30px;
 }
 
-a {
-/*    color: #4183C4; */
-	color: #008abc;
-    text-decoration: none;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: 100;
-	color: #5e676d;
-	font-family: "Open Sans", sans-serif;
-	margin: 0.5rem 0;
-
-}
-
-h1 {
-	line-height: 1.4;
-	color: #484849;
-}
-
-h2 {
-	color: #585859;
-}
 
 h1:hover a.anchor,
 h2:hover a.anchor,
@@ -64,6 +78,7 @@ h5:hover a.anchor,
 h6:hover a.anchor {
     text-decoration: none;
 }
+
 h1 tt,
 h1 code {
     font-size: inherit;
@@ -88,31 +103,8 @@ h6 tt,
 h6 code {
     font-size: inherit;
 }
-h1 {
-    padding-bottom: .3em;
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
-}
-h2 {
-   padding-bottom: .3em;
-    font-size: 1.75em;
-    line-height: 1.225;
-}
-h3 {
-    font-size: 1.5em;
-    line-height: 1.43;
-}
-h4 {
-    font-size: 1.25em;
-}
-h5 {
-    font-size: 1em;
-}
-h6 {
-   font-size: 1em;
-    color: #777;
-}
+
+
 p,
 blockquote,
 ul,
@@ -361,5 +353,5 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 code, kbd, pre, samp {
-  font-family: "JetBrains Mono", "Roboto Mono", Menlo, monospace;
+  font-family: code_font;
 }

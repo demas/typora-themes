@@ -1,3 +1,8 @@
+:root
+    --side-bar-bg-color side-bar-bg-color
+    --text-color side-bar-fg-color
+    --select-text-bg-color #4a89dc
+
 html, body
   color main_color
   background-color back_color !important
@@ -8,11 +13,13 @@ html, body
 a
   color link_color
   text-decoration link_decoration
+  border-bottom link_bottom
 
 strong
   color strong_color
 
 h1, h2, h3, h4, h5, h6
+
 	font-weight 100
 	color h_color
 	margin 0.5rem 0
@@ -23,17 +30,19 @@ h1
   padding-bottom .3em
   font-size 2.25em
   line-height 1.2
-  border-bottom 1px solid #eee
+  border-bottom h1_underscore
 
 h2
   color h2_color
-  padding-bottom .3em
+  padding-bottom .1em
+  padding-top 0.6em
   font-size 1.75em
   line-height 1.225
 
 h3
   font-size 1.5em
   line-height 1.43
+  color h3_color
 
 h4
   font-size 1.25em
@@ -48,9 +57,8 @@ h6
 .md-fences,
 code,
 tt {
-    border: snipped_border;
-    background-color: code_background
     border-radius: 3px;
+    background-color: code_background
     padding: 0;
     padding: 2px 4px 0px 4px;
     font-size: 0.9em;
@@ -67,7 +75,7 @@ code
 }
 
 #write {
-    max-width: 860px;
+    max-width: 760px;
   	margin: 0 auto;
   	padding: 30px;
     padding-bottom: 100px;
@@ -89,27 +97,27 @@ h6:hover a.anchor {
 
 h1 tt,
 h1 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 h2 tt,
 h2 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 h3 tt,
 h3 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 h4 tt,
 h4 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 h5 tt,
 h5 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 h6 tt,
 h6 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
 
 
@@ -119,7 +127,7 @@ ul,
 ol,
 dl,
 table{
-    margin: 0.3em 0;
+    margin: 0.6em 0;
 }
 li>ol,
 li>ul {
@@ -312,8 +320,12 @@ header, .context-menu, .megamenu-content, footer{
 }
 
 .mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
     background-color: side-bar-bg-color;
+}
+
+#typora-sidebar {
+  background-color: side-bar-bg-color;
+  color: side-bar-fg-color
 }
 
 .md-lang {
@@ -343,4 +355,6 @@ header, .context-menu, .megamenu-content, footer{
 
 code, kbd, pre, samp {
   font-family: code_font;
+  font-size: code_font_size;
+  line-height: code_line_height;
 }
